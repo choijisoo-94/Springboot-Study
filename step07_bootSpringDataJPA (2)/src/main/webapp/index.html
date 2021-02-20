@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index.html</title>
+</head>
+<body>
+	<button onclick="ajexReq()">클릭시 비동기로 seq는 1, writer=유재석 정보 검색</button>
+	
+	<br><hr><br>
+	
+	<div id="viewData"></div>
+	
+	<script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+	function ajexReq(){
+		axios.get("board-seq-and-writer?seq=1&w=이민정")
+		.then(resData => {
+			//alert(resData + "" + typeof(resData));
+			console.log(resData);
+			
+			//data = JSON.parse(resData);
+			data = eval("("+resData+")");
+			console.log(2);
+			alert(resData);
+			
+			document.getElementById("viewData").innerText = resData.writer;
+		}).catch(error => {
+			console.log("비정상 응답 : ", error);
+		});
+		
+	}
+	
+	</script>
+	
+	
+</body>
+</html>

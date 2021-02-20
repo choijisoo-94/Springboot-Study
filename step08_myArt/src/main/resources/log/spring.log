@@ -1,0 +1,29 @@
+2021-02-03 16:53:10.013  INFO 1108 --- [restartedMain] payroll.PayrollApplication               : Starting PayrollApplication using Java 1.8.0_201 on DESKTOP-0IJT3DG with PID 1108 (C:\ITSTUDY\07_2.SpringBoot\step08_myArt\target\classes started by Playdata in C:\ITSTUDY\07_2.SpringBoot\step08_myArt)
+2021-02-03 16:53:10.014  INFO 1108 --- [restartedMain] payroll.PayrollApplication               : No active profile set, falling back to default profiles: default
+2021-02-03 16:53:10.389  INFO 1108 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-03 16:53:10.402  INFO 1108 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
+2021-02-03 16:53:10.599  INFO 1108 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2021-02-03 16:53:10.601  INFO 1108 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-03 16:53:10.605  INFO 1108 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-03 16:53:10.641  INFO 1108 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-03 16:53:10.641  INFO 1108 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 623 ms
+2021-02-03 16:53:10.711  INFO 1108 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-03 16:53:10.723  INFO 1108 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2021-02-03 16:53:10.789  INFO 1108 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2021-02-03 16:53:10.790  INFO 1108 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+2021-02-03 16:53:10.790  WARN 1108 --- [restartedMain] org.hibernate.dialect.Oracle9Dialect     : HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2021-02-03 16:53:10.791  WARN 1108 --- [restartedMain] org.hibernate.dialect.OracleDialect      : HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2021-02-03 16:53:10.914  INFO 1108 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-03 16:53:10.915  INFO 1108 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-03 16:53:10.925  INFO 1108 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-03 16:53:11.083  WARN 1108 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-03 16:53:11.186  INFO 1108 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-03 16:53:11.359  INFO 1108 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2021-02-03 16:53:11.369  INFO 1108 --- [restartedMain] payroll.PayrollApplication               : Started PayrollApplication in 1.415 seconds (JVM running for 2282.387)
+2021-02-03 16:53:11.384  INFO 1108 --- [restartedMain] payroll.LoadDatabase                     : Preloading Employee{id=1, name='Bilbo Baggins', role='burglar'}
+2021-02-03 16:53:11.388  INFO 1108 --- [restartedMain] payroll.LoadDatabase                     : Preloading Employee{id=2, name='Frodo Baggins', role='thief'}
+2021-02-03 16:53:11.390  INFO 1108 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-02-03 17:18:37.470  INFO 1108 --- [Thread-27] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-03 17:18:37.471  INFO 1108 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-03 17:18:37.472  INFO 1108 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2021-02-03 17:18:37.487  INFO 1108 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.

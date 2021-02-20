@@ -1,0 +1,48 @@
+[1] 사용자 정의 검색 메소드 추가 구현 가능[쿼리 메소드]
+     1. 네이밍 rule
+        find엔티티명By(타입변수명) or findBy변수명(타입 변수명)
+        "select * from 엔티티명 where 컬럼명=데이터" 문장 자동 생성
+        
+     2. 검색 데이터가 포함(like 연산자) 조건의 명명 rule
+        findBoardByTitleContaining
+        "select * from board where title like %데이터%" 자동 생성
+  
+  2.예시
+     title에 맞게 제목의 게시물 검색
+        findBoardByTitle()
+        findByTitle()
+          select * from board where title=?
+          
+  3. 쿼리 메소드
+     - spiring data jpa는 jpa 기반의 내용을 자동으로 생성 및 관리해줌
+     - 사용자 정의 검색 메소드 필요시 적용하는 기술
+        : 복잡한 JPQL을 메소드 명만으로 대체할 수 있는 기술
+        
+[2] html과 jsp를 Spring Boot 구조에선 어떻게 어디에 개발해야 하는지에 대한 학습
+   1. src/main/resources/static/*.html, *.css, *.js, image 등
+      - src/main/webapp/ 경로와 동기화
+      
+   2. jsp
+      1. jsp를 url상에서 호출 및 서비스시
+      - src/main/webapp/*.jsp
+      - src/main/webapp/dir/../*.jsp
+      
+      2. @RequestMapping 등의 설정으로 jsp 이동시
+         2-1. application.properties에 설정 필수
+            spring.mvc.view.prefix=/WEB-INF/views/
+            spring.mvc.view.suffix=.jsp
+            
+[3] spring boot 기준에서 본 애노테이션
+   1. spring framework에서 사용 가능한 모든 애노테이션 사용
+   2. @RequestBody 
+      @RestController 사용시 client가 입력하는 데이터를 JSON 포멧으로 수용할 때 필수
+   
+   3. URI template 기술 추가 적용
+      @PathVariable를 parameter에 적용
+      
+   4. @ResponseBody
+      @RequestMapping 기반의 서비스 메소드에서 jsp 등을 거치지 않고 메소드 반환값으로 client에게 데이터 응답시 필수 사용
+      응답 포멧 : JSON 형식
+      @GetMapping 등의 rest api 기반의 애노테이션으로 선언된 서비스 메소드엔 코딩 불필요
+         
+
